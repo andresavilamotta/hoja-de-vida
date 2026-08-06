@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+ENV/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary scratch logs
+.agents/
+.gemini/
+scratch/
+*.log
+
+.vercel
+
+# Large files exceeding GitHub 100MB limit
+*.mp4
+export_ia/
+soportes_y_pdf/*.mp4

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Ariel Andrés Ávila Motta - Optimizado</title>
+    <!-- Import Google Fonts (Inter and Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS variables for colors and fonts */
+        :root {
+            --font-header: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --color-primary: #1b4332; /* Forest Green for Conservation */
+            --color-text: #2d3748; /* Slate Dark */
+            --color-text-light: #718096; /* Gray */
+            --color-border: #e2e8f0;
+            --color-accent: #2d6a4f;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            line-height: 1.5;
+            background-color: #f7fafc;
+            padding: 40px 20px;
+        }
+
+        /* CV Sheet Layout */
+        .cv-container {
+            max-width: 820px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 50px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            border-top: 6px solid var(--color-primary);
+        }
+
+        /* Header Section */
+        header {
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-family: var(--font-header);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-family: var(--font-header);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        .contact-info a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Section layout (Pure single column) */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-family: var(--font-header);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            border-bottom: 1px solid var(--color-primary);
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            font-size: 0.95rem;
+            text-align: justify;
+            margin-bottom: 12px;
+        }
+
+        /* Skills (Competencies) grid */
+        .skills-list {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .skills-list li {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .skills-list li::before {
+            content: "•";
+            color: var(--color-accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .skills-list strong {
+            color: var(--color-primary);
+        }
+
+        /* Work Experience Blocks */
+        .job-block {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .job-title {
+            font-family: var(--font-header);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-accent);
+        }
+
+        .job-company {
+            font-weight: 700;
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .job-date {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            font-weight: 500;
+        }
+
+        .job-projects {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin-left: 15px;
+        }
+
+        .bullet-list li {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 12px;
+            text-align: justify;
+        }
+
+        .bullet-list li::before {
+            content: "▪";
+            color: var(--color-accent);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.8rem;
+        }
+
+        /* Education Blocks */
+        .edu-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .edu-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .edu-school {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        .edu-date {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        /* Print optimization rules */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+                color: #000000;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+                border-top: none;
+            }
+
+            a {
+                color: #000000 !important;
+                text-decoration: none;
+            }
+
+            /* Prevent layout cuts */
+            h2, h3 {
+                page-break-after: avoid;
+            }
+
+            section {
+                page-break-inside: auto;
+            }
+
+            .job-block {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- Header -->
+        <header>
+            <h1>Ariel Andrés Ávila Motta</h1>
+            <div class="subtitle">Economista | Magíster (c) en Gerencia de Proyectos</div>
+            <div class="contact-info">
+                <span>📍 Mocoa, Putumayo, Colombia</span>
+                <span>📞 +57 323 226 5360</span>
+                <span>✉️ <a href="mailto:info@andresavila.org">info@andresavila.org</a></span>
+                <span>🌐 <a href="http://www.andresavila.org" target="_blank">www.andresavila.org</a></span>
+                <span>💼 <a href="https://linkedin.com/in/andresavilam" target="_blank">linkedin.com/in/andresavilam</a></span>
+            </div>
+        </header>
+
+        <!-- Perfil Profesional -->
+        <section>
+            <h2>Perfil Profesional</h2>
+            <p>
+                Economista y Magíster (c) en Gerencia de Proyectos con una sólida trayectoria de más de 4 años en gestión pública, estructuración presupuestal, docencia universitaria e inclusión financiera. Especialista en la formulación, monitoreo y seguimiento de proyectos de inversión financiados con recursos de regalías (Sistema General de Regalías - SGR), recursos propios y fondos de cooperación internacional. Experto en el control administrativo-financiero de convenios estatales, procesos precontractuales (estudios de mercado, SECOP II), y estructuración de planes de inversión. Cuenta con competencias destacadas en el relacionamiento estratégico comunitario, caracterización socio-predial, y articulación de acuerdos voluntarios de conservación de bosques. Hábil docente universitario en componentes de economía y gestión pública para programas de Derecho, con enfoque práctico e interdisciplinario.
+            </p>
+        </section>
+
+        <!-- Competencias Clave -->
+        <section>
+            <h2>Competencias Clave (Clústeres de Habilidades)</h2>
+            <ul class="skills-list">
+                <li><strong>Gerencia de Proyectos Públicos:</strong> Formulación MGA Web, seguimiento técnico-financiero de regalías (SGR), reservas presupuestales, estructuración de planes de inversión y liquidación contractual.</li>
+                <li><strong>Gestión Administrativa y Financiera:</strong> Presupuestos estatales, SECOP II, auditoría documental de expedientes, estructuración de estudios previos y control de honorarios.</li>
+                <li><strong>Desarrollo Territorial y Relacionamiento Social:</strong> Caracterización socio-predial, diálogo con líderes comunitarios, socialización en Núcleos de Desarrollo Forestal (NDFyB) y formalización de acuerdos de conservación.</li>
+                <li><strong>Docencia y Capacitación:</strong> Cátedra en economía general, economía política, finanzas públicas, diseño pedagógico y análisis de entorno económico.</li>
+                <li><strong>Gestión de Crédito y Riesgo:</strong> Análisis de capacidad de pago, colocación de microcréditos, microfinanzas y modelos de riesgo en campo.</li>
+            </ul>
+        </section>
+
+        <!-- Experiencia Profesional -->
+        <section>
+            <h2>Experiencia Profesional</h2>
+            
+            <div class="job-company">CORPOAMAZONIA</div>
+            
+            <!-- Rol 1 -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="job-title">Coordinador Administrativo y Financiero de Proyectos y Convenios</span>
+                    <span class="job-date">Noviembre 2022 – Enero 2026</span>
+                </div>
+                <div class="job-projects">Proyectos clave: Plan de Contención de Deforestación (Convenio MinAmbiente 1198-2023), Programa "Conservar Paga" (Contrato 191-2024), Proyecto Cooperación Internacional "CoLoRes" (CORPOAMAZONIA-COSPE) y Proyecto Piscícola (Fondo Colombia en Paz)</div>
+                <ul class="bullet-list">
+                    <li>Estructurar y diseñar planes de trabajo, cronogramas de contratación y planes de inversión financiera siguiendo las propuestas económicas de convenios interadministrativos y de cooperación internacional.</li>
+                    <li>Realizar el seguimiento, control y verificación financiera de las cuentas de honorarios, cuentas de cobro de equipos profesionales y validación del cumplimiento de pagos de seguridad social.</li>
+                    <li>Liderar y formular procesos precontractuales y estudios de mercado del sector que garanticen la adquisición eficiente de bienes, equipos y servicios logísticos requeridos para la ejecución de proyectos ambientales.</li>
+                    <li>Coordinar y estructurar la documentación técnica de estudios previos y actas de comités (modificaciones, suspensiones y reinicios) articulando con el área jurídica de la entidad.</li>
+                    <li>Supervisar los procesos administrativos de liquidación contractual y velar por el buen manejo e inversión de los recursos del proyecto de acuerdo con la normatividad legal.</li>
+                    <li>Gestionar y consolidar expedientes físicos y digitales de los proyectos y del personal técnico para su auditoría permanente.</li>
+                    <li>Liderar la caracterización socio-predial y relacionamiento directo con líderes comunitarios y gestores del cambio en los Núcleos de Desarrollo Forestal y de la Biodiversidad (NDFyB) para la firma y formalización de Acuerdos Voluntarios de Conservación.</li>
+                </ul>
+            </div>
+
+            <!-- Rol 2 -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="job-title">Profesional / Asesor de Planificación y Seguimiento SGR</span>
+                    <span class="job-date">Enero 2022 – Septiembre 2023</span>
+                </div>
+                <div class="job-projects">Subdirección de Planificación Ambiental</div>
+                <ul class="bullet-list">
+                    <li>Ejecutar el monitoreo, control y seguimiento técnico-financiero a la ejecución de proyectos de inversión ambiental financiados por el Sistema General de Regalías (SGR) y recursos propios de la corporación.</li>
+                    <li>Auditar y realizar la revisión documental exhaustiva de expedientes de contratos y convenios de inversión con el fin de verificar que cuenten con soportes administrativos, contables y financieros que justifiquen el gasto público.</li>
+                    <li>Monitorear y gestionar la ejecución de reservas presupuestales, cuentas por pagar institucionales e indicadores mínimos de gestión de la entidad para el Plan de Acción "Amazonias Vivas".</li>
+                    <li>Apoyar en los procesos administrativos para la estructuración de Expedientes Ambientales destinados al seguimiento de los Planes de Ordenamiento Territorial (POT) de municipios priorizados en la jurisdicción.</li>
+                    <li>Coordinar la consolidación y control de calidad del expediente técnico del proyecto internacional de Drones/UAVS con el Instituto Tecnológico de Massachusetts (MIT) para el monitoreo de deslizamientos en Mocoa.</li>
+                </ul>
+            </div>
+
+            <!-- Banco W -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="job-company">BANCO W</span>
+                    <span class="job-date">Marzo 2020 – Octubre 2021</span>
+                </div>
+                <div class="job-header">
+                    <span class="job-title">Analista de Crédito y Microfinanzas</span>
+                </div>
+                <ul class="bullet-list">
+                    <li>Evaluar el riesgo crediticio y la capacidad de endeudamiento y pago de microempresarios de la región en trabajo directo de campo.</li>
+                    <li>Estructurar y analizar modelos financieros simples para proyectos productivos, determinando la viabilidad económica del microcrédito.</li>
+                    <li>Cumplir con metas comerciales de colocación, renovación de cartera y fidelización de clientes en zonas rurales y urbanas.</li>
+                </ul>
+            </div>
+
+            <!-- Unicervantes -->
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="job-company">UNICERVANTES</span>
+                    <span class="job-date">Agosto 2022 – Actualidad</span>
+                </div>
+                <div class="job-header">
+                    <span class="job-title">Docente Universitario (Hora Cátedra) - Programa de Derecho</span>
+                </div>
+                <ul class="bullet-list">
+                    <li>Diseñar y dictar la cátedra de componentes de economía general, economía política y gestión pública para estudiantes de Derecho.</li>
+                    <li>Elaborar estrategias pedagógicas y materiales de estudio enfocados en conectar la teoría económica con la práctica de las políticas públicas y el entorno legal colombiano.</li>
+                    <li>Evaluar el desempeño académico y guiar investigaciones formativas sobre desarrollo socioeconómico de los territorios.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Logros y Proyectos Recientes -->
+        <section>
+            <h2>Logros y Certificaciones Recientes</h2>
+            <div class="edu-block" style="margin-bottom: 12px;">
+                <div>
+                    <span class="edu-title">Ganador del Primer Puesto - Hackathon IA Mocoa</span><br>
+                    <span class="edu-school">Desarrollo de una App de Agendamiento Inteligente de Citas para el Despacho de la Gobernación del Putumayo.</span>
+                </div>
+                <span class="edu-date">2026</span>
+            </div>
+            <div class="edu-block">
+                <div>
+                    <span class="edu-title">Certificación en Inteligencia Artificial (Bootcamp Talento TECH)</span><br>
+                    <span class="edu-school">Formación especializada en modelos de IA y Ciencia de Datos - Corporación Unificada Nacional (CUN) / MinTIC.</span>
+                </div>
+                <span class="edu-date">2025</span>
+            </div>
+        </section>
+
+        <!-- Formación Académica -->
+        <section>
+            <h2>Formación Académica</h2>
+            
+            <div class="edu-block">
+                <div>
+                    <span class="edu-title">Máster en Project Management (Gerencia de Proyectos)</span><br>
+                    <span class="edu-school">Universidad Internacional de Valencia (VIU)</span>
+                </div>
+                <span class="edu-date">En curso</span>
+            </div>
+
+            <div class="edu-block">
+                <div>
+                    <span class="edu-title">Economista</span><br>
+                    <span class="edu-school">Universidad del Tolima</span>
+                </div>
+                <span class="edu-date">Graduado (2020)</span>
+            </div>
+
+            <div class="edu-block">
+                <div>
+                    <span class="edu-title">Diplomado en Emprendimiento Óptimo, Formal y Digital</span><br>
+                    <span class="edu-school">Universidad del Tolima</span>
+                </div>
+                <span class="edu-date">2022</span>
+            </div>
+
+            <div class="edu-block">
+                <div>
+                    <span class="edu-title">Diplomado en Políticas Públicas</span><br>
+                    <span class="edu-school">Universidad del Tolima</span>
+                </div>
+                <span class="edu-date">2020</span>
+            </div>
+
+            <div class="edu-block">
+                <div>
+                    <span class="edu-title">Diplomado en Competencias TIC</span><br>
+                    <span class="edu-school">Corporación Unificada Nacional (CUN)</span>
+                </div>
+                <span class="edu-date">2019</span>
+            </div>
+        </section>
+        
+        <!-- Enlace a Soportes (Crucial para ATS) -->
+        <section style="margin-top: 30px; text-align: center; border-top: 1px dashed var(--color-border); padding-top: 15px; page-break-inside: avoid;">
+            <p style="font-size: 0.9rem; color: var(--color-text-light); text-align: center;">
+                * La documentación de soporte que certifica toda mi experiencia y formación académica está digitalizada y disponible para su visualización y descarga en:
+            </p>
+            <p style="font-size: 0.95rem; font-weight: 600; text-align: center; margin-top: 5px;">
+                🔗 <a href="http://www.andresavila.org" target="_blank" style="color: var(--color-accent); text-decoration: underline;">www.andresavila.org/soportes</a>
+            </p>
+        </section>
+    </div>
+
+</body>
+</html>

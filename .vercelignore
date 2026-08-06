@@ -1,0 +1,4 @@
+soportes_y_pdf/**/*.mp4
+*.mp4
+!assets/video_pitch.mp4
+export_ia/
