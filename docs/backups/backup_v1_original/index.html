@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariel Andrés Ávila Motta - Portafolio Profesional</title>
+    <!-- Import Google Fonts (Outfit & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css?v=12">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">ÁVILA<span> MOTTA</span></a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Perfil</a></li>
+                <li><a href="#video-pitch">Video Pitch</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
+                <li><a href="#logros">Logros</a></li>
+                <li><a href="#soportes">Soportes</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Alternar Tema" style="border: none; background: transparent; padding: 0;">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir Menú" style="border: none; background: transparent; padding: 0;">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <!-- Interactive Canvas Background (React Bits Aurora + Particles Hybrid) -->
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- Rotating Text Pill (React Bits RotatingText) -->
+                <div class="hero-tag rotating-pill" id="rotating-role-pill">
+                    <i class="fas fa-sparkles"></i>
+                    <span id="rotating-role-text" class="rotating-text-val">Economista & Gestor de Proyectos</span>
+                </div>
+                
+                <!-- Decrypted & Shiny Title (React Bits DecryptedText / ShinyText) -->
+                <h1 id="hero-title" class="shiny-title decrypted-text" data-text="Ariel Andrés Ávila Motta">Ariel Andrés Ávila Motta</h1>
+                <p class="hero-description">Especialista en planificación presupuestal, monitoreo de proyectos de inversión (SGR/MGA) y convenios de conservación estatal en la Amazonía.</p>
+                <div class="hero-actions">
+                    <a href="#experiencia" class="btn btn-primary star-border-btn">Ver Proyectos</a>
+                    <a href="hoja_de_vida_imprimible.html" target="_blank" class="btn btn-secondary"><i class="fas fa-file-pdf"></i> Descargar CV</a>
+                </div>
+            </div>
+            <div class="hero-graphic frameless-stage">
+                <!-- Background Large Watermark Typography Removed -->
+                
+                <!-- Ambient Backlight Spotlight Glow -->
+                <div class="hero-spotlight-glow"></div>
+                
+                <!-- Grounding Shadow Floor -->
+                <div class="hero-floor-shadow"></div>
+
+                <!-- Frameless Cutout Profile Image Container (Straightened & Enlarged) -->
+                <div class="frameless-portrait-wrapper" id="portrait-tilt-wrapper">
+                    <img src="assets/images/profile-exec-nobg.webp" alt="Ariel Andrés Ávila Motta" id="hero-profile-img" class="hero-profile-img cutout-standalone hero-img-enlarged">
+                </div>
+
+                <!-- Floating Role Pill Badge -->
+                <div class="portrait-badge frameless-badge" id="portrait-badge">
+                    <i class="fas fa-briefcase"></i>
+                    <span id="badge-title">Liderazgo & Estrategia</span>
+                </div>
+
+                <!-- Interactive Pose Switcher Pills Removed -->
+            </div>
+        </div>
+        <!-- Franja base Hero -->
+        <div class="franja-base franja-hero"></div>
+    </section>
+    <!-- Video Pitch / Presentación Section (Cinematic) -->
+    <section class="video-section section-padding" id="video-pitch">
+        <div class="container" style="max-width: 1400px;">
+            <div class="section-header">
+                <h2>Presentación & Pitch Ejecutivo</h2>
+                <p>Conoce mi trayectoria en gestión pública, gerencia de proyectos SGR e innovación con Inteligencia Artificial.</p>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="cinematic-video-container">
+                <video id="pitch-video" class="cinematic-video" controls poster="assets/video_poster.jpg" preload="metadata">
+                    <source src="assets/video_pitch.mp4" type="video/mp4">
+                    Tu navegador no soporta el reproductor de video HTML5.
+                </video>
+            </div>
+            
+            <div class="video-features cinematic-features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="feature-text">
+                        <h4>Gerencia SGR & MGA</h4>
+                        <p>Estructuración y control de fondos públicos por +$8.000M.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="feature-text">
+                        <h4>Conservar Paga</h4>
+                        <p>Desarrollo sostenible y convenios en el bioma amazónico.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                    <div class="feature-text">
+                        <h4>Agentes de IA</h4>
+                        <p>Ganador Hackathon IA Mocoa y Prompt Engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THEMATIC PANELS (Multifaceted Profile) -->
+    
+    <!-- Panel 1: Analítica & IA -->
+    <section class="theme-panel" id="analitica-ia">
+        <canvas id="ia-canvas" class="panel-canvas"></canvas>
+        <div class="theme-panel-top">
+        <div class="theme-panel-content">
+            <span class="theme-badge"><i class="fas fa-robot"></i> Innovación & Datos</span>
+            <h2>Orquestación de Inteligencia Artificial</h2>
+            <p>Integración de modelos fundacionales (LLMs) y técnicas de Prompt Engineering para automatizar flujos de trabajo, analizar grandes volúmenes de datos y optimizar la toma de decisiones en el sector público y privado.</p>
+            <p>Ganador del 1er puesto en la Hackathon IA Mocoa 2026, demostrando la capacidad de transformar retos territoriales en soluciones tecnológicas eficientes mediante Python y agentes autónomos.</p>
+        </div>
+        <div class="theme-panel-visual tilted-card-wrapper">
+            <img src="assets/images/profile-tech-nobg.webp" alt="Ariel Ávila - IA y Datos" class="card-spotlight">
+        </div>
+        <!-- Franja base IA -->
+        <div class="franja-base franja-ia"></div>
+            </div>
+        <div class="theme-panel-support">
+            <div class="container">
+                <div class="achievements-grid">
+                <!-- Logro 1 -->
+                <div class="achievement-card">
+                    <div class="achievement-img">
+                        <img src="images/hackathon.jpg" alt="Hackathon IA Mocoa" onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80'">
+                        <span class="achievement-badge"><i class="fas fa-trophy"></i> 1er Puesto</span>
+                    </div>
+                    <div class="achievement-info">
+                        <h3>Hackathon IA Mocoa 2026</h3>
+                        <h4>Gobernación del Putumayo</h4>
+                        <p>Líder del equipo ganador con una propuesta tecnológica basada en IA: una aplicación inteligente de agendamiento y distribución de citas para el despacho del Gobernador, optimizando los flujos de atención al ciudadano.</p>
+                        <div class="achievement-tags">
+                            <span>Inteligencia Artificial</span>
+                            <span>App Móvil</span>
+                            <span>Gestión Pública</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logro 2 -->
+                <div class="achievement-card">
+                    <div class="achievement-img">
+                        <img src="images/talentotech.jpg" alt="Bootcamp Talento TECH CUN" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80'">
+                        <span class="achievement-badge badge-blue"><i class="fas fa-certificate"></i> Certificación</span>
+                    </div>
+                    <div class="achievement-info">
+                        <h3>Bootcamp IA - Talento TECH</h3>
+                        <h4>CUN & Ministerio TIC</h4>
+                        <p>Aprobación del exigente bootcamp de entrenamiento intensivo enfocado en modelos predictivos, Inteligencia Artificial generativa, Ciencia de Datos y el desarrollo de soluciones de automatización inteligente (incluyendo ecosistemas como Open Agent Hub).</p>
+                        <div class="achievement-tags">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Ciencia de Datos</span>
+                            <span>Agentes LLM</span>
+                            <span>Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel 2: Conservación & Desarrollo Territorial -->
+    <section class="theme-panel" id="conservacion">
+        <canvas id="conservacion-canvas" class="panel-canvas"></canvas>
+        <div class="theme-panel-top">
+        <div class="theme-panel-content">
+            <span class="theme-badge"><i class="fas fa-leaf"></i> Campo & SGR</span>
+            <h2>Conservación y Desarrollo Territorial</h2>
+            <p>Experiencia directa en la Amazonía colombiana gestionando convenios con el Ministerio de Ambiente. Coordinación del programa "Conservar Paga", articulando esfuerzos entre el Estado y las comunidades locales.</p>
+            <p>Caracterización socio-predial, levantamiento de información en campo y estructuración de proyectos de inversión bajo el Sistema General de Regalías (SGR) para el desarrollo sostenible.</p>
+        </div>
+        <div class="theme-panel-visual tilted-card-wrapper">
+            <img src="assets/images/profile-field-nobg.webp" alt="Ariel Ávila - Conservación" class="card-spotlight">
+        </div>
+        <!-- Franja base Conservación -->
+        <div class="franja-base franja-conservacion"></div>
+            </div>
+        <div class="theme-panel-support">
+            <div class="container">
+                <div class="timeline-container">
+                <!-- Timeline Selector Buttons -->
+                <div class="timeline-nav" id="timeline-nav">
+                    <button class="nav-btn active" data-contract="c9">2025: Conservar Paga</button>
+                    <button class="nav-btn" data-contract="c8">2024: Convenio 1198</button>
+                    <button class="nav-btn" data-contract="c7">2024: Socialización</button>
+                    <button class="nav-btn" data-contract="c6">2023: Tilapia Putumayo</button>
+                    <button class="nav-btn" data-contract="c5">2023: Planeación Convenio</button>
+                    <button class="nav-btn" data-contract="c4">2023: Monitoreo SGR</button>
+                    <button class="nav-btn" data-contract="c2">2022: Proyecto CoLoRes</button>
+                    <button class="nav-btn" data-contract="c1">2022: Planeación Territorial</button>
+                </div>
+
+                <!-- Timeline Display Cards -->
+                <div class="timeline-content" id="timeline-content">
+                    <!-- Contract 9 (Active default) -->
+                    <div class="contract-card active" id="c9">
+                        <div class="card-header">
+                            <h3>Contrato N° 004 - 2025</h3>
+                            <span class="card-date"><i class="far fa-calendar-alt"></i> Ene 2025 – Ene 2026</span>
+                        </div>
+                        <h4 class="card-role">Coordinador Administrativo - Proyecto "Conservar Paga"</h4>
+                        <div class="card-body">
+                            <p><strong>Objeto:</strong> Realizar las actividades socio-prediales para la estructuración y formalización de acuerdos voluntarios de conservación bajo el proyecto “Conservar paga: Incentivos económicos para la conservación del bosque en el bioma amazónico”.</p>
+                            <p><strong>Vínculo con Capacitación:</strong> Relacionado directamente con el <em>Diplomado en Organización Documental de la ESAP</em> para la estructuración física y digital de expedientes de los gestores del cambio.</p>
+                            <p><strong>Obligaciones y Logros Destacados:</strong></p>
+                            <ul>
+                                <li>Liderar el cierre administrativo y financiero de la <strong>Fase I (Contrato 191-2024)</strong>, asegurando la correcta ejecución de los recursos iniciales ($1.836 Millones).</li>
+                                <li>Apoyar la formulación técnica, financiera (presupuestos en Excel) y la justificación de la <strong>Prórroga y Fase II</strong> del proyecto, logrando una adición de recursos por $1.686 Millones.</li>
+                                <li>Estructurar e implementar el Plan de Trabajo del Contrato actual, diseñando el plan de inversiones y cronograma de contrataciones.</li>
+                                <li>Consolidar de manera física y digital el expediente documental de cada gestor del cambio beneficiario del incentivo.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contract 8 -->
+                    <div class="contract-card" id="c8">
+                        <div class="card-header">
+                            <h3>Contrato N° 385 - 2024</h3>
+                            <span class="card-date"><i class="far fa-calendar-alt"></i> May 2024 – Sep 2024</span>
+                        </div>
+                        <h4 class="card-role">Coordinador Administrativo - Convenio 1198</h4>
+                        <div class="card-body">
+                            <p><strong>Objeto:</strong> Apoyar la coordinación administrativa y financiera del convenio interadministrativo 1198 con el Ministerio de Ambiente para la contención de la deforestación y fomento de incentivos a la conservación.</p>
+                            <p><strong>Obligaciones Destacadas:</strong></p>
+                            <ul>
+                                <li>Coordinación administrativa general de la ejecución presupuestal del Convenio Interadministrativo (MADS - Corpoamazonia) valorado en <strong>$4.440 Millones COP</strong>, auditando adquisiciones, equipos GPS y contrataciones.</li>
+                                <li>Supervisar la validación y requisitos de contratación para gestores sociales en campo.</li>
+                                <li>Elaborar estudios de mercado y procesos precontractuales para adquisición de bienes y servicios del convenio.</li>
+                                <li>Estructurar el informe final y consolidar los soportes de capacitaciones prediales y listados en los Núcleos de Desarrollo Forestal.</li>
+                                <li>Realizar el control a la liquidación contractual de los subprocesos del convenio.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contract 7 -->
+                    <div class="contract-card" id="c7">
+                        <div class="card-header">
+                            <h3>Contrato N° 027 - 2024</h3>
+                            <span class="card-date"><i class="far fa-calendar-alt"></i> Ene 2024 – Abr 2024</span>
+                        </div>
+                        <h4 class="card-role">Apoyo Administrativo y Financiero - Convenio 1198 (Fase Inicial)</h4>
+                        <div class="card-body">
+                            <p><strong>Objeto:</strong> Brindar apoyo administrativo y de campo en el marco de la caracterización de beneficiarios de incentivos de conservación del Convenio 1198.</p>
+                            <p><strong>Vínculo con Capacitación:</strong> Vinculado con el <em>Curso de Clasificación Documental de la ESAP</em> para ordenar soportes y listas del convenio.</p>
+                            <p><strong>Obligaciones Destacadas:</strong></p>
+                            <ul>
+                                <li>Revisar financieramente las cuentas de cobro y honorarios del equipo profesional y su seguridad social.</li>
+                                <li>Elaborar estudios de mercado para la adquisición de los equipos del convenio.</li>
+                                <li>Participar en comités técnicos, capacitaciones con el Instituto SINCHI y reuniones veredales con líderes comunitarios.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contract 6 -->
+                    <div class="contract-card" id="c6">
+                        <div class="card-header">
+                            <h3>Contrato N° 535 - 2023</h3>
+                            <span class="card-date"><i class="far fa-calendar-alt"></i> Nov 2023 – Feb 2024</span>
+                        </div>
+                        <h4 class="card-role">Apoyo Administrativo y Socio-Empresarial - Proyecto Tilapia Putumayo</h4>
+                        <div class="card-body">
+                            <p><strong>Objeto:</strong> Apoyar el área administrativa, financiera y socio-empresarial del proyecto "Fortalecimiento de la cadena de valor de la Tilapia Roja (ASOPEZ) Valle del Guamuez", financiado por el Fondo Colombia en Paz.</p>
+                            <p><strong>Obligaciones Destacadas:</strong></p>
+                            <ul>
+                                <li>Elaborar estudios previos para la adquisición de insumos, materiales y equipos sostenibles del proyecto.</li>
+                                <li>Elaborar informes financieros de ejecución y sistematizar la información de los productores beneficiados.</li>
+                                <li>Acompañar a los piscicultores en la negociación del servicio de eviscerado con plantas de sacrificio autorizadas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contract 5 -->
+                    <div class="contract-card" id="c5">
+                        <div class="card-header">
+                            <h3>Contrato N° 504 - 2023</h3>
+                            <span class="card-date"><i class="far fa-calendar-alt"></i> Nov 2023 – Dic 2023</span>
+                        </div>
+                        <h4 class="card-role">Apoyo Financiero y de Planeación - Convenio 1198</h4>
+                        <div class="card-body">
+                            <p><strong>Objeto:</strong> Apoyar la fase inicial de planeación del Convenio 1198 para la contención de la deforestación.</p>
+                            <p><strong>Obligaciones Destacadas:</strong></p>
+                            <ul>
+                                <li>Apoyar la elaboración del cronograma de actividades y el plan de trabajo del convenio interadministrativo.</li>
+                                <li>Estructurar el "Plan de Reunión Social" para coordinar los eventos de interacción y diálogo con las comunidades amazónicas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contract 4 -->
+                    <div class="contract-card" id="c4">
+                        <div class="card-header">
+                            <h3>Contrato N° 168 - 2023</h3>
+                            <span class="card-date"><i class="far fa-calendar-alt"></i> Mar 2023 – Sep 2023</span>
+                        </div>
+                        <h4 class="card-role">Apoyo al Monitoreo, Control Administrativo y Financiero SGR</h4>
+                        <div class="card-body">
+                            <p><strong>Objeto:</strong> Apoyar el seguimiento técnico-financiero a proyectos de ordenamiento ambiental territorial y reducción de deforestación ejecutados con recursos de regalías (SGR) y fondos institucionales.</p>
+                            <p><strong>Vínculo con Capacitación:</strong> Respaldado por el <em>Seminario de Interventoría y Supervisión de Contratos de la ESAP</em> para auditar contratos y cuentas por pagar de los proyectos.</p>
+                            <p><strong>Obligaciones Destacadas:</strong></p>
+                            <ul>
+                                <li>Monitorear y realizar la revisión documental de contratos y convenios financiados con regalías (SGR) para asegurar que cuenten con soportes contables que justifiquen el gasto.</li>
+                                <li>Consolidar el expediente del proyecto internacional de Drones/UAVS con el MIT para el monitoreo de deslizamientos en Mocoa.</li>
+                                <li>Llevar el control de ejecución de reservas presupuestales y cuentas por pagar de la Subdirección.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contract 2 -->
+                    <div class="contract-card" id="c2">
+                        <div class="card-header">
+                            <h3>Contrato N° 581 - 2022</h3>
+                            <span class="card-date"><i class="far fa-calendar-alt"></i> Nov 2022 – Feb 2023</span>
+                        </div>
+                        <h4 class="card-role">Apoyo a la Supervisión del Proyecto "CoLoRes" (Cooperación COSPE)</h4>
+                        <div class="card-body">
+                            <p><strong>Objeto:</strong> Apoyo a la supervisión administrativa y financiera a la ejecución del proyecto internacional CoLoRes para economías sostenibles de mujeres y jóvenes en apoyo al proceso de paz.</p>
+                            <p><strong>Obligaciones Destacadas:</strong></p>
+                            <ul>
+                                <li>Vigilar el buen manejo, cronograma e inversión de los recursos del proyecto cooperativo.</li>
+                                <li>Elaborar informes de supervisión de manera mensual, trimestral y final adjuntando soportes de ejecución.</li>
+                                <li>Estructurar estudios previos de las adquisiciones y velar por el cumplimiento de seguridad social de los contratistas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contract 1 -->
+                    <div class="contract-card" id="c1">
+                        <div class="card-header">
+                            <h3>Contrato N° 057 - 2022</h3>
+                            <span class="card-date"><i class="far fa-calendar-alt"></i> Ene 2022 – Oct 2022</span>
+                        </div>
+                        <h4 class="card-role">Profesional de Planificación y Seguimiento SGR</h4>
+                        <div class="card-body">
+                            <p><strong>Objeto:</strong> Apoyar el seguimiento documental y control administrativo-financiero a los convenios de la Subdirección de Planificación bajo el Plan de Acción "Amazonias Vivas".</p>
+                            <p><strong>Obligaciones Destacadas:</strong></p>
+                            <ul>
+                                <li>Auditar expedientes de convenios con recursos de regalías (SGR) verificando soportes financieros y de ejecución del gasto.</li>
+                                <li>Apoyar la conformación de expedientes ambientales para el seguimiento a los planes de ordenamiento territorial (POT).</li>
+                                <li>Apoyar en el seguimiento y gestión de reservas presupuestales y cuentas por pagar de la entidad.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel 3: Gestión Pública Institucional -->
+    <section class="theme-panel" id="institucional">
+        <canvas id="institucional-canvas" class="panel-canvas"></canvas>
+        <div class="theme-panel-top">
+        <div class="theme-panel-content">
+            <span class="theme-badge"><i class="fas fa-user-tie"></i> Rigurosidad & Finanzas</span>
+            <h2>Gestión Pública y Rigurosidad Institucional</h2>
+            <p>Sólida trayectoria en auditoría y control presupuestal. Manejo experto de SECOP II, Metodología General Ajustada (MGA) y liquidación de proyectos de gran envergadura (+$8.000M COP).</p>
+            <p>Comprometido con la transferencia de conocimiento como docente universitario en áreas de Economía y Gestión Pública, formando a las próximas generaciones de líderes territoriales.</p>
+        </div>
+        <div class="theme-panel-visual tilted-card-wrapper">
+            <img src="assets/images/profile-portrait-nobg.webp" alt="Ariel Ávila - Institucional" class="card-spotlight">
+        </div>
+        <!-- Franja base Institucional -->
+        <div class="franja-base franja-institucional"></div>
+            </div>
+        <div class="theme-panel-support">
+            <div class="container">
+                <div class="other-experience">
+                <div class="other-card">
+                    <div class="other-header">
+                        <h3>Formulador y Estructurador de Proyectos</h3>
+                        <span>2022 – 2024</span>
+                    </div>
+                    <h4>Corpoamazonia (Convocatorias SGR, MinCiencias, FONAM, FCA)</h4>
+                    <p>Lideré y apoyé la formulación técnica y financiera de proyectos estratégicos de conservación y desarrollo productivo (ej. Restauración Ecológica, Proyecto Tilapia Roja), <strong>apoyando la estructuración de presupuestos y modelos financieros para proyectos valorados en más de $8.000 Millones COP en conjunto.</strong> 
+                    <br><br>
+                    <strong>Logros clave:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.6;">
+                        <li>Diseño de modelos en Excel para el cálculo de Ingresos y Beneficios (IyB) evaluando la viabilidad económica de las intervenciones.</li>
+                        <li>Estructuración de matrices de control contractual, estudios de mercado y consolidación de requisitos administrativos para convocatorias (MinCiencias 34 y 36).</li>
+                        <li>Articulación de documentos técnicos bajo metodologías del Sistema General de Regalías (SGR) y MGA.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="other-card">
+                    <div class="other-header">
+                        <h3>Docente Hora Cátedra (Programa de Derecho)</h3>
+                        <span>2022 – Actualidad</span>
+                    </div>
+                    <h4>Fundación Universitaria Cervantes San Agustín (UNICERVANTES)</h4>
+                    <p>Diseño curricular e impartición de cátedras articulando la teoría macroeconómica con el marco legal constitucional colombiano.
+                    <br><br>
+                    <strong>Asignaturas y Enfoques Curriculares:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.6;">
+                        <li><strong>Economía Colombiana y Economía Política:</strong> Análisis crítico de la estructura económica, integración de variables históricas y autonomía del Banco de la República para fundamentar decisiones jurídicas.</li>
+                        <li><strong>Fundamentos de Economía y Estadística Descriptiva:</strong> Herramientas analíticas cuantitativas y principios micro/macroeconómicos aplicados al entorno legal e instituciones del Estado.</li>
+                        <li><strong>Lógica Formal:</strong> Estructuración argumentativa, promoviendo la ética y liderazgo cervantino en el análisis de casos.</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="other-card">
+                    <div class="other-header">
+                        <h3>Analista de Crédito y Microfinanzas</h3>
+                        <span>2020 – 2021</span>
+                    </div>
+                    <h4>Banco W</h4>
+                    <p>Evaluación de riesgo crediticio en campo para microempresas, estructuración de análisis financieros de capacidad de pago e inclusión financiera regional.</p>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí / Perfil Section (Magic Bento Grid Layout) -->
+    <section class="about section-padding" id="sobre-mi">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="shiny-text">Perfil Profesional & Estrategia</h2>
+                <p>Articulando la rigurosidad presupuestal del Estado con la inteligencia artificial generativa y el desarrollo territorial.</p>
+                <div class="header-line"></div>
+            </div>
+            
+            <!-- Magic Bento Grid (React Bits MagicBento / SpotlightCard) -->
+            <div class="bento-grid">
+                <!-- Bento Cell 1: Bio / Context (Span 2) -->
+                <div class="bento-card bento-span-2 card-spotlight">
+                    <div class="bento-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Liderazgo en Gestión Pública & Conservación</h3>
+                    <p>Soy un profesional apasionado por el desarrollo territorial y las políticas públicas, con más de 4 años combinando la rigurosidad técnica de los presupuestos estatales con el trabajo de campo y la pedagogía universitaria.</p>
+                    <p>En mi paso por Corpoamazonia, he coordinado la administración financiera y logística de convenios clave del Ministerio de Ambiente y el programa pionero <strong>"Conservar Paga"</strong>, además de auditar proyectos financiados mediante el Sistema General de Regalías (SGR).</p>
+                    <p>Actualmente integro herramientas avanzadas de <strong>Inteligencia Artificial (Prompt Engineering y orquestación de Agentes LLM)</strong> para optimizar el análisis de datos y la automatización documental.</p>
+                    
+                    <div class="bento-subtags">
+                        <span><i class="fas fa-check-circle"></i> Formulación MGA & SGR</span>
+                        <span><i class="fas fa-check-circle"></i> SECOP II & Auditoría</span>
+                        <span><i class="fas fa-check-circle"></i> Diálogo Comunitario</span>
+                    </div>
+                </div>
+
+                <!-- Bento Cell 2: Animated Stat Counters (React Bits CountUp) -->
+                <div class="bento-card bento-stats card-spotlight">
+                    <div class="bento-header-mini">
+                        <i class="fas fa-chart-line"></i> Métricas Clave de Gestión
+                    </div>
+                    <div class="stats-counter-grid">
+                        <div class="stat-item">
+                            <span class="stat-number count-up" data-target="8000" data-prefix="$" data-suffix="M+">$0</span>
+                            <span class="stat-label">COP Fondos Gestionados</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number count-up" data-target="4" data-suffix="+ Años">0</span>
+                            <span class="stat-label">Experiencia en Sector Público</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number count-up" data-target="1" data-prefix="Puesto " data-suffix="°">0</span>
+                            <span class="stat-label">Hackathon IA Mocoa 2026</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number count-up" data-target="100" data-suffix="%">0</span>
+                            <span class="stat-label">Cumplimiento Presupuestal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Cell 3: Competencias Clústeres (Span 2) -->
+                <div class="bento-card bento-span-2 card-spotlight">
+                    <div class="bento-header-mini">
+                        <i class="fas fa-sliders-h"></i> Clústeres de Competencias Avanzadas
+                    </div>
+                    <div class="bento-skills-list">
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Gerencia de Proyectos Públicos (SGR, MGA, Liquidación)</span><span class="skill-pct">95%</span></div>
+                            <div class="skill-progress"><div class="progress" style="width: 95%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Orquestación de IA (Prompt Engineering, Agentes LLM & Python)</span><span class="skill-pct">92%</span></div>
+                            <div class="skill-progress"><div class="progress glow-cyan" style="width: 92%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Gestión Administrativa y Financiera (SECOP II, Auditoría)</span><span class="skill-pct">90%</span></div>
+                            <div class="skill-progress"><div class="progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Docencia Universitaria (Economía y Gestión Pública)</span><span class="skill-pct">88%</span></div>
+                            <div class="skill-progress"><div class="progress" style="width: 88%"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info"><span>Estructuración Financiera y Modelado en Excel (IyB)</span><span class="skill-pct">95%</span></div>
+                            <div class="skill-progress"><div class="progress" style="width: 95%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Cell 4: Stack & Herramientas -->
+                <div class="bento-card card-spotlight">
+                    <div class="bento-header-mini">
+                        <i class="fas fa-microchip"></i> Stack & Herramientas
+                    </div>
+                    <div class="tech-stack-pills">
+                        <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-pill"><i class="fas fa-robot"></i> LLM Agents</span>
+                        <span class="tech-pill"><i class="fas fa-file-invoice-dollar"></i> MGA / SGR</span>
+                        <span class="tech-pill"><i class="fas fa-file-contract"></i> SECOP II</span>
+                        <span class="tech-pill"><i class="fas fa-table"></i> Excel IyB</span>
+                        <span class="tech-pill"><i class="fas fa-map-marked-alt"></i> GIS Predial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Proyectos Destacados Section -->
+    <section class="projects-section section-padding" id="proyectos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proyectos Destacados & Casos de Éxito</h2>
+                <p>Iniciativas clave en planificación territorial, desarrollo comunitario e innovación tecnológica.</p>
+                <div class="header-line"></div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="conservacion">Conservación & Bioma</button>
+                <button class="filter-btn" data-filter="sgr">SGR & Presupuesto</button>
+                <button class="filter-btn" data-filter="ia">IA & Tecnología</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Proyecto 1: Conservar Paga -->
+                <div class="project-card card-spotlight tilted-card-wrapper" data-category="conservacion">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Conservar Paga Bioma Amazónico">
+                        <span class="project-badge">Conservar Paga</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span><i class="fas fa-building"></i> Corpoamazonia / MADS</span>
+                            <span><i class="fas fa-coins"></i> $3.522M COP</span>
+                        </div>
+                        <h3>Programa "Conservar Paga" (Fase I & II)</h3>
+                        <p>Estructuración administrativa, jurídica y socio-predial para acuerdos de conservación forestal con comunidades amazónicas.</p>
+                        <div class="project-tags">
+                            <span>Convenios MADS</span>
+                            <span>Socio-Predial</span>
+                            <span>Plan de Inversiones</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Hackathon IA Mocoa -->
+                <div class="project-card card-spotlight tilted-card-wrapper star-border-card" data-category="ia">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Sistema de Agendamiento Inteligente">
+                        <span class="project-badge badge-gold"><i class="fas fa-trophy"></i> 1er Lugar IA</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span><i class="fas fa-landmark"></i> Gobernación del Putumayo</span>
+                            <span><i class="fas fa-microchip"></i> Agentes IA</span>
+                        </div>
+                        <h3>Sistema Inteligente de Agendamiento de Citas</h3>
+                        <p>Solución con IA generativa para optimizar la recepción y distribución de audiencias públicas en la Gobernación.</p>
+                        <div class="project-tags">
+                            <span>Inteligencia Artificial</span>
+                            <span>Python / Agentes</span>
+                            <span>Gestión Pública</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Monitoreo Regalías SGR -->
+                <div class="project-card card-spotlight tilted-card-wrapper" data-category="sgr">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Monitoreo SGR Regalías">
+                        <span class="project-badge">Regalías SGR</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span><i class="fas fa-shield-alt"></i> Subdirección Planificación</span>
+                            <span><i class="fas fa-file-invoice-dollar"></i> MGA / SGR</span>
+                        </div>
+                        <h3>Auditoría & Monitoreo Presupuestal SGR</h3>
+                        <p>Supervisión financiera y técnica a convenios de desarrollo territorial con recursos del Sistema General de Regalías.</p>
+                        <div class="project-tags">
+                            <span>Auditoría SGR</span>
+                            <span>MGA</span>
+                            <span>Liquidación Contractual</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4: Proyecto Tilapia Putumayo -->
+                <div class="project-card card-spotlight tilted-card-wrapper" data-category="conservacion">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1534951009808-78610f770453?auto=format&fit=crop&w=800&q=80" alt="Tilapia Roja Valle del Guamuez">
+                        <span class="project-badge">Fondo Colombia en Paz</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span><i class="fas fa-handshake"></i> ASOPEZ / Guamuez</span>
+                            <span><i class="fas fa-seedling"></i> Desarrollo Sostenible</span>
+                        </div>
+                        <h3>Cadena de Valor Tilapia Roja (ASOPEZ)</h3>
+                        <p>Estructuración socio-empresarial, estudios de mercado para insumos y enlace comercial para piscicultores.</p>
+                        <div class="project-tags">
+                            <span>Piscicultura</span>
+                            <span>Estudios de Mercado</span>
+                            <span>Economía Rural</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5: CoLoRes COSPE -->
+                <div class="project-card" data-category="conservacion">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Proyecto CoLoRes COSPE">
+                        <span class="project-badge">Cooperación COSPE</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span><i class="fas fa-globe"></i> Italia / Colombia</span>
+                            <span><i class="fas fa-users"></i> Inclusión Social</span>
+                        </div>
+                        <h3>Proyecto Internacional "CoLoRes"</h3>
+                        <p>Apoyo a la supervisión financiera de iniciativas productivas de paz para mujeres y jóvenes en el Putumayo.</p>
+                        <div class="project-tags">
+                            <span>Cooperación Int.</span>
+                            <span>Supervisión</span>
+                            <span>Economía Social</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6: Estructuración IyB Excel -->
+                <div class="project-card" data-category="sgr">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Estructuración Financiera Excel">
+                        <span class="project-badge">Finanzas Públicas</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span><i class="fas fa-calculator"></i> MinCiencias / FONAM</span>
+                            <span><i class="fas fa-chart-pie"></i> > $8.000M COP</span>
+                        </div>
+                        <h3>Modelado Financiero IyB (Ingresos y Beneficios)</h3>
+                        <p>Diseño de plantillas en Excel para evaluación económica de proyectos de inversión en convocatorias públicas.</p>
+                        <div class="project-tags">
+                            <span>Excel Avanzado</span>
+                            <span>Modelado Financiero</span>
+                            <span>Convocatorias</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Educación Section -->
+    <section class="education section-padding" id="educacion">
+        <div class="container">
+            <div class="section-header">
+                <h2>Educación Profesional</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Máster en Project Management</h3>
+                    <p class="edu-org">Universidad Internacional de Valencia (VIU)</p>
+                    <span class="edu-tag">En Curso (Postgrado)</span>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <h3>Economista</h3>
+                    <p class="edu-org">Universidad del Tolima</p>
+                    <span class="edu-tag">Graduado (2020)</span>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Diplomados & Formación</h3>
+                    <p class="edu-org">Políticas Públicas | Emprendimiento Digital | Competencias TIC</p>
+                    <span class="edu-tag">CUN / U. del Tolima</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones de la ESAP Section -->
+    <section class="certifications section-padding" id="certificaciones">
+        <div class="container">
+            <div class="section-header">
+                <h2>Certificaciones del Estado (ESAP)</h2>
+                <p>Cursos de capacitación y diplomados realizados en la Escuela Superior de Administración Pública (ESAP), directamente vinculados a tus soportes documentales.</p>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="cert-grid">
+                <!-- Cert 1: Gerencia de Proyectos PMI -->
+                <div class="cert-card">
+                    <div class="cert-badge">60 Horas</div>
+                    <div class="cert-content">
+                        <h3>Gerencia de Proyectos bajo Estándares PMI</h3>
+                        <p class="cert-org">Escuela Superior de Administración Pública (ESAP) | 2026</p>
+                        <p class="cert-desc">Entrenamiento enfocado en metodologías de gestión de proyectos del Project Management Institute.</p>
+                        <a href="./Hoja de Vida Andrés Ávila - Resumen - Completa Versión 2026.pdf#page=14" target="_blank" class="btn-cert"><i class="far fa-file-pdf"></i> Ver Certificado (Pág. 14)</a>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Interventoría y Supervisión -->
+                <div class="cert-card">
+                    <div class="cert-badge">8 Horas</div>
+                    <div class="cert-content">
+                        <h3>Interventoría y Supervisión de Contratos</h3>
+                        <p class="cert-org">Escuela Superior de Administración Pública (ESAP) | 2026</p>
+                        <p class="cert-desc">Seminario práctico sobre control de contratos estatales y responsabilidades de supervisión.</p>
+                        <a href="./Hoja de Vida Andrés Ávila - Resumen - Completa Versión 2026.pdf#page=12" target="_blank" class="btn-cert"><i class="far fa-file-pdf"></i> Ver Certificado (Pág. 12)</a>
+                    </div>
+                </div>
+
+                <!-- Cert 3: Organización Documental -->
+                <div class="cert-card">
+                    <div class="cert-badge">80 Horas</div>
+                    <div class="cert-content">
+                        <h3>Diplomado en Organización Documental</h3>
+                        <p class="cert-org">Escuela Superior de Administración Pública (ESAP) | 2024</p>
+                        <p class="cert-desc">Diplomado en estructuración de archivos físicos y digitales para entidades gubernamentales.</p>
+                        <a href="./Hoja de Vida Andrés Ávila - Resumen - Completa Versión 2026.pdf#page=15" target="_blank" class="btn-cert"><i class="far fa-file-pdf"></i> Ver Certificado (Pág. 15)</a>
+                    </div>
+                </div>
+
+                <!-- Cert 4: Clasificación Documental -->
+                <div class="cert-card">
+                    <div class="cert-badge">40 Horas</div>
+                    <div class="cert-content">
+                        <h3>Marcos de Referencia y Clasificación Documental</h3>
+                        <p class="cert-org">Escuela Superior de Administración Pública (ESAP) | 2024</p>
+                        <p class="cert-desc">Curso sobre la aplicación de tablas de retención y clasificación de documentos oficiales.</p>
+                        <a href="./Hoja de Vida Andrés Ávila - Resumen - Completa Versión 2026.pdf#page=13" target="_blank" class="btn-cert"><i class="far fa-file-pdf"></i> Ver Certificado (Pág. 13)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Soportes / Anexos Hub Section -->
+    <section class="documents section-padding" id="soportes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Centro de Descargas y Soportes</h2>
+                <p>Para mayor transparencia y rapidez en los procesos de reclutamiento, aquí se centralizan los soportes académicos y certificaciones laborales del CV.</p>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="docs-grid">
+                <!-- Doc 1 -->
+                <div class="doc-card">
+                    <i class="far fa-file-pdf pdf-icon"></i>
+                    <div class="doc-info">
+                        <h3>Hoja de Vida Completa (PDF Soportes)</h3>
+                        <p>Documento completo con certificados foliados (41 páginas, 11.5 MB).</p>
+                    </div>
+                    <a href="./Hoja de Vida Andrés Ávila - Resumen - Completa Versión 2026.pdf" download class="btn-doc"><i class="fas fa-download"></i></a>
+                </div>
+                <!-- Doc 2 -->
+                <div class="doc-card">
+                    <i class="far fa-file-pdf pdf-icon"></i>
+                    <div class="doc-info">
+                        <h3>Dossier de Contratos Corpoamazonia</h3>
+                        <p>Dossier completo consolidado de contratos (Págs. 16-17, 32-38).</p>
+                    </div>
+                    <a href="./Hoja de Vida Andrés Ávila - Resumen - Completa Versión 2026.pdf#page=16" target="_blank" class="btn-doc"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <!-- Doc 3 -->
+                <div class="doc-card">
+                    <i class="far fa-file-pdf pdf-icon"></i>
+                    <div class="doc-info">
+                        <h3>Título Universitario & Diplomados</h3>
+                        <p>Diploma de Economista y certificaciones de la Universidad del Tolima.</p>
+                    </div>
+                    <a href="./Hoja de Vida Andrés Ávila - Resumen - Completa Versión 2026.pdf#page=11" target="_blank" class="btn-doc"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Ariel Andrés Ávila Motta. Portafolio Web Profesional.</p>
+            <div class="social-links">
+                <a href="mailto:info@andresavila.org"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="http://www.andresavila.org" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lenis Smooth Scroll Engine -->
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
